@@ -45,7 +45,7 @@
 
     <ImageView
         android:layout_width="200dp"
-        android:layout_height="300dp"
+        android:layout_height="250dp"
         android:id="@+id/iv_poster"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_tiny"
-            android:text="0 minutes"
+            android:text=""
             android:layout_marginLeft="@dimen/spacing_tiny"
             android:layout_marginRight="@dimen/spacing_tiny"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -121,7 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_tiny"
-            android:text="dd mm yyyy"
+            android:text=""
             android:layout_marginLeft="@dimen/spacing_tiny"
             android:layout_marginRight="@dimen/spacing_tiny"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -152,7 +152,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_tiny"
-            android:text="Action"
+            android:text=""
             android:layout_marginLeft="@dimen/spacing_tiny"
             android:layout_marginRight="@dimen/spacing_tiny"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -183,7 +183,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/spacing_tiny"
-            android:text="5/5 (100)"
+            android:text=""
             android:layout_marginLeft="@dimen/spacing_tiny"
             android:layout_marginRight="@dimen/spacing_tiny"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -193,34 +193,38 @@
             app:layout_constraintVertical_bias="0"
             app:layout_constraintHorizontal_bias="0"/>
 
-        <!--<TextView-->
-        <!--android:id="@+id/tv_text_artists"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:text="Artists:"-->
-        <!--android:textStyle="bold"/>-->
-        <!--<TextView-->
-        <!--android:id="@+id/tv_artists"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="@dimen/spacing_tiny"-->
-        <!--android:text="John Doe\nJane Doe"/>-->
+    <TextView
+        android:id="@+id/tv_text_artists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Artists:"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_poster"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"/>
+    <TextView
+        android:id="@+id/tv_artists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_tiny"
+        android:text=""
+        android:textSize="@dimen/font_caption"
+        android:layout_marginLeft="@dimen/spacing_small"
+        android:layout_marginRight="@dimen/spacing_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_text_artists"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"/>
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:orientation="vertical"-->
-        <!--app:layout_constraintStart_toStartOf="@+id/iv_poster"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/iv_poster"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0"-->
-        <!--app:layout_constraintHorizontal_bias="0"-->
-        <!--android:layout_marginStart="@dimen/spacing_small"-->
-        <!--android:layout_marginTop="@dimen/spacing_small">-->
-
-        <TextView
+    <TextView
         android:id="@+id/tv_text_synopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -230,17 +234,17 @@
         android:layout_marginStart="@dimen/spacing_small"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_poster"
+        app:layout_constraintTop_toBottomOf="@+id/tv_artists"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintHorizontal_bias="0"/>
 
-        <TextView
+    <TextView
         android:id="@+id/tv_synopsis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/spacing_tiny"
-        android:text="Lorem ipsum"
+        android:text=""
         android:layout_marginStart="@dimen/spacing_small"
         android:layout_marginTop="@dimen/spacing_small"
         app:layout_constraintStart_toStartOf="parent"
@@ -249,8 +253,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintHorizontal_bias="0"/>
-
-    <!--</LinearLayout>-->
 
 
 </android.support.constraint.ConstraintLayout>

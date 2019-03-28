@@ -1,5 +1,6 @@
 package com.test.movieapp.api;
 
+import com.test.movieapp.model.MovieCastResponse;
 import com.test.movieapp.model.MovieDetailApiResponse;
 import com.test.movieapp.model.MovieListApiResponse;
 
@@ -26,6 +27,10 @@ public interface MainApi {
     @GET("movie/{movie_id}")
     Call<MovieDetailApiResponse> getDetail(@Path("movie_id") int movieId,
                                            @Query("api_key") String apiKey);
+
+    @GET("movie/{movie_id}/credits")
+    Call<MovieCastResponse> getCasts(@Path("movie_id") int movieId,
+                                     @Query("api_key") String apiKey);
 
     @GET("search/movie")
     Call<MovieListApiResponse> searchMovie(@Query("api_key") String apiKey,

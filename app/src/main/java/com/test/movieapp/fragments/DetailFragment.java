@@ -12,10 +12,13 @@ import android.view.ViewGroup;
 import com.test.movieapp.MovieApp;
 import com.test.movieapp.api.MainApi;
 import com.test.movieapp.databinding.FragmentMovieInfoBinding;
+import com.test.movieapp.model.Cast;
 import com.test.movieapp.model.MovieDetailApiResponse;
 import com.test.movieapp.model.MovieListItem;
 import com.test.movieapp.presenters.DetailPresenter;
 import com.test.movieapp.utils.GlideUtil;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -56,6 +59,7 @@ public class DetailFragment extends BaseFragment {
             item = getArguments().getParcelable(ARG_ITEM);
             if(item!=null){
                 presenter.fetchMovieDetail(item.getId());
+                presenter.fetchCast(item.getId());
             }
         }
     }
@@ -77,5 +81,17 @@ public class DetailFragment extends BaseFragment {
         binding.tvRating.setText(response.getVoteAverage()+"/10 ("+response.getVoteCount()+")");
         binding.tvSynopsis.setText(response.getOverview());
         GlideUtil.loadThumbnail(activity, binding.ivPoster, item);
+    }
+
+    public void refreshDataCast(List<Cast> casts){
+        binding.tvArtists.setText("No information.");
+        if(casts!=null){
+            String castsText = "";
+            for(int i=0; i<5; i++){
+                castsText+=casts.get(i).getName()+" as "+casts.get(i).getCharacter();
+                if(i<4) castsText+="\n";
+            }
+            binding.tvArtists.setText(castsText);
+        }
     }
 }

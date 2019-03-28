@@ -4,6 +4,7 @@ import com.test.movieapp.R;
 import com.test.movieapp.api.MainApi;
 import com.test.movieapp.fragments.DetailFragment;
 import com.test.movieapp.fragments.HomeFragment;
+import com.test.movieapp.model.MovieCastResponse;
 import com.test.movieapp.model.MovieDetailApiResponse;
 import com.test.movieapp.model.MovieListApiResponse;
 import com.test.movieapp.utils.ToastUtils;
@@ -39,6 +40,26 @@ public class DetailPresenter {
             @Override
             public void onFailure(Call<MovieDetailApiResponse> call, Throwable t) {
                 view.hideProgressDialog();
+                ToastUtils.showToast(view.getActivity(),t.getMessage());
+            }
+        });
+    }
+
+    //called to fetch casts names
+    public void fetchCast(int movieId){
+        mainApi.getCasts(movieId,view.getString(R.string.api_key)).enqueue(new Callback<MovieCastResponse>() {
+            @Override
+            public void onResponse(Call<MovieCastResponse> call, Response<MovieCastResponse> response) {
+                if(response.isSuccessful()){
+                    view.refreshDataCast(response.body().getCast());
+                }
+                else{
+                    ToastUtils.showToast(view.getActivity(),response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<MovieCastResponse> call, Throwable t) {
                 ToastUtils.showToast(view.getActivity(),t.getMessage());
             }
         });
