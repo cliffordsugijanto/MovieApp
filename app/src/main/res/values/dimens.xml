@@ -1,0 +1,59 @@
+<resources>
+    <!--Typical spacing between two views-->
+    <dimen name="spacing_huge">32dp</dimen>
+    <dimen name="spacing_xxlarge">28dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+
+    <!--Font sizes-->
+    <dimen name="font_button">15sp</dimen>
+    <dimen name="font_caption">13sp</dimen>
+    <dimen name="font_small_caption">9sp</dimen>
+    <dimen name="font_very_small_caption">7sp</dimen>
+    <dimen name="font_body">16sp</dimen>
+    <dimen name="font_sub_head">17sp</dimen>
+    <dimen name="font_title">20sp</dimen>
+    <dimen name="font_headline">22sp</dimen>
+    <dimen name="font_display_0">26sp</dimen>
+    <dimen name="font_display_1">32sp</dimen>
+    <dimen name="font_display_2">43sp</dimen>
+    <dimen name="font_display_3">52sp</dimen>
+    <dimen name="font_display_4">108sp</dimen>
+    <dimen name="anchor_margin_top">200dp</dimen>
+    <dimen name="button_corner_radius">5dp</dimen>
+
+    <dimen name="margin_normal">75dp</dimen>
+    <dimen name="margin_small">56dp</dimen>
+    <dimen name="margin_tiny">40dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_big">13dp</dimen>
+    <dimen name="padding">12dp</dimen>
+    <dimen name="padding_xsmall">7dp</dimen>
+
+    <dimen name="social_button_size">48dp</dimen>
+    <dimen name="avatar_size">20dp</dimen>
+    <dimen name="avatar_size_medium">24dp</dimen>
+    <dimen name="avatar_size_big">40dp</dimen>
+    <dimen name="logo_height">40dp</dimen>
+    <dimen name="video_item_text_size">11sp</dimen>
+    <dimen name="video_item_margin">12dp</dimen>
+    <dimen name="recycler_view_separator_width">1dp</dimen>
+    <dimen name="btn_size">16dp</dimen>
+    <dimen name="btn_size_big">30dp</dimen>
+    <dimen name="btn_size_xbig">42dp</dimen>
+    <dimen name="btn_size_xxbig">64dp</dimen>
+    <dimen name="ad_banner_height">100dp</dimen>
+    <dimen name="action_bar_height">56dp</dimen>
+    <dimen name="circle_button_size">32dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="nav_bar_width">330dp</dimen>
+    <dimen name="nav_header_profile">80dp</dimen>
+</resources>
